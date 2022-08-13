@@ -2,7 +2,7 @@ import base64
 import io
 import cv2
 
-filename = "/home/ubuntu/reconstructed.jpg"
+filename = "/home/ubuntu/reconstructed2.jpg"
 
 img = cv2.imread(filename)
 height, width, channels = img.shape
@@ -15,5 +15,5 @@ jpg_as_text = base64.b64encode(buffer)
 
 print(jpg_as_text)
 
-with open('/home/ubuntu/testImage2', 'wb') as file_to_save:
+with open('/home/ubuntu/testImageBytes2', 'wb') as file_to_save:
     file_to_save.write(jpg_as_text)
