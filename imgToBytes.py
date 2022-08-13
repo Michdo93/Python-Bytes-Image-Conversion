@@ -11,9 +11,14 @@ print(width)
 print(channels)
 
 retval, buffer = cv2.imencode('.jpg', img)
-jpg_as_text = base64.b64encode(buffer)
+jpg_as_text = buffer.tobytes()
 
-print(jpg_as_text)
+jpg_as_text = (str(jpg_as_text))
 
-with open('/home/ubuntu/testImageBytes2', 'wb') as file_to_save:
-    file_to_save.write(jpg_as_text)
+text_file = open("testImageBytes2", "w")
+ 
+#write string to file
+text_file.write(jpg_as_text)
+ 
+#close file
+text_file.close()
