@@ -13,7 +13,7 @@ print(channels)
 retval, buffer = cv2.imencode('.jpg', img)
 jpg_as_text = buffer.tobytes()
 
-jpg_as_text = (str(jpg_as_text))
+jpg_as_text = str(jpg_as_text)
 
 text_file = open("testImageBytes2", "w")
  
